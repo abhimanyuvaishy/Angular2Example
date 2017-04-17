@@ -1,7 +1,7 @@
-System.register(["angular2/platform/browser", "./environment_app.component"], function(exports_1, context_1) {
+System.register(["angular2/platform/browser", "./environment_app.component", "./HelloWorld_appcomponents"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
-    var browser_1, environment_app_component_1;
+    var browser_1, environment_app_component_1, HelloWorld_appcomponents_1;
     return {
         setters:[
             function (browser_1_1) {
@@ -9,9 +9,13 @@ System.register(["angular2/platform/browser", "./environment_app.component"], fu
             },
             function (environment_app_component_1_1) {
                 environment_app_component_1 = environment_app_component_1_1;
+            },
+            function (HelloWorld_appcomponents_1_1) {
+                HelloWorld_appcomponents_1 = HelloWorld_appcomponents_1_1;
             }],
         execute: function() {
             browser_1.bootstrap(environment_app_component_1.AppComponent);
+            browser_1.bootstrap(HelloWorld_appcomponents_1.helloWorldComponent);
         }
     }
 });
