@@ -30,6 +30,12 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                     this.userinfoList.push(this.userinfo);
                     this.userinfo = {};
                 };
+                AppComponent.prototype.removeLine = function (userdata) {
+                    var index = this.userinfoList.indexOf(userdata);
+                    if (index !== -1) {
+                        this.userinfoList.splice(index, 1);
+                    }
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',

@@ -21,6 +21,13 @@ export class AppComponent {
     this.userinfoList.push(this.userinfo);
     this.userinfo={};
   }
+  removeLine(userdata){
+     let index: number = this.userinfoList.indexOf(userdata);
+    if (index !== -1) {
+        this.userinfoList.splice(index, 1);
+ // this.userinfoList.splice(userdata);
+ 
+  }
   
   
 }
