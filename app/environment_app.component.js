@@ -18,16 +18,22 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
+            //import {BrowserModule} from "angular2/platform/browser";
             AppComponent = (function () {
                 function AppComponent() {
                     this.Name = 'My First Angular 2 App';
+                    //firstName:string='';
+                    this.userinfo = {};
+                    this.userinfoList = [];
                 }
+                AppComponent.prototype.addData = function () {
+                    this.userinfoList.push(this.userinfo);
+                    this.userinfo = {};
+                };
                 AppComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-app'
-                    }),
-                    core_1.View({
-                        template: '<h2>{{Name}}</h2>'
+                        selector: 'my-app',
+                        templateUrl: 'app/templates/form_apptemplate.html'
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

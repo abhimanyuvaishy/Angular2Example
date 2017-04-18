@@ -1,0 +1,24 @@
+ <label>Enter your Name:</label> <input type="text" name="custName" [(ngModel)]="userinfo.firstName" ><br/>
+  <label>Enter your Address:</label> <input type="text" name="address" [(ngModel)]="userinfo.address" ><br/>
+  <label>Enter your Age:</label> <input type="text" name="age" [(ngModel)]="userinfo.age" >
+  
+  <button (click)="addData()">Add Data</button>
+
+  <div>
+      <table border="2px">
+          <thead>
+              <tr>
+                  <td>Name</td>
+                  <td>Address</td>
+                  <td>Age</td>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor='#user of userinfoList'>
+                <td>{{user.firstName}}</td>
+                <td>{{user.address}}</td>
+                <td>{{user.age}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
