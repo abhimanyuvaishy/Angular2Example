@@ -16,11 +16,16 @@
           </thead>
           <tbody>
               <tr *ngFor='#user of userinfoList'>
-                <td>{{user.firstName}}</td>
+                <td>{{user.firstName| uppercase}}</td>
                 <td>{{user.address}}</td>
                 <td>{{user.age}}</td>
                 <td><a href="#" (click)="removeLine(user)">Delete</a></td>
               </tr>
           </tbody>
       </table>
-  </div>
+  </div><br/>
+  <label>{{NewAge}}</label><br/>
+  <Label>Number</Label> <input type="text" [(ngModel)]="NumberForPower"> <br/>
+    <Label>Power Value</Label> <input type="text" [(ngModel)]="Power">
+  <br/>
+  <!--<label>Power is  : {{NumberForPower | exponentialStrength: Power}}</label>-->
